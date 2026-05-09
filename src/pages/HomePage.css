@@ -1,0 +1,104 @@
+.home-page {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.hero {
+  border: 1px solid var(--color-glass-border);
+  border-radius: 1.25rem;
+  background: var(--color-glass-surface-strong);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: clamp(1rem, 3vw, 2rem);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hero__brand {
+  color: var(--color-accent);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.hero h1 {
+  color: var(--color-text-strong);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.2;
+  max-width: 24ch;
+}
+
+.hero__subtitle {
+  color: var(--color-text-muted);
+  max-width: 54ch;
+}
+
+.filters {
+  border: 1px solid var(--color-glass-border);
+  border-radius: 1rem;
+  background: var(--color-glass-surface);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 12rem;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid var(--color-input-border);
+  background: var(--color-input-bg);
+  border-radius: 0.75rem;
+  padding: 0 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.search-field input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.7rem 0;
+  background: transparent;
+  color: var(--color-text-strong);
+}
+
+.search-field input::placeholder {
+  color: var(--color-text-soft);
+}
+
+.level-select {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+.level-select select {
+  border: 1px solid var(--color-input-border);
+  background: var(--color-input-bg);
+  border-radius: 0.75rem;
+  color: var(--color-text-strong);
+  padding: 0.62rem 0.65rem;
+  outline: none;
+}
+
+.courses-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.empty-state {
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+}

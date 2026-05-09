@@ -1,0 +1,131 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.header__inner {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  border: none;
+  background: none;
+  color: var(--color-text-strong);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-link,
+.mobile-link {
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--duration-fast), background-color var(--duration-fast);
+}
+
+.nav-link {
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.7rem;
+}
+
+.nav-link:hover,
+.mobile-link:hover {
+  color: var(--color-text-strong);
+}
+
+.nav-link.is-active,
+.mobile-link.is-active {
+  color: var(--color-text-strong);
+  background: var(--color-glass-surface);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-glass-border);
+  background: var(--color-glass-surface);
+  color: var(--color-text-strong);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.mobile-only,
+.mobile-panel {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    width: min(1100px, calc(100% - 1.25rem));
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-flex;
+  }
+
+  .mobile-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows var(--duration-medium);
+  }
+
+  .mobile-panel.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  .mobile-nav {
+    min-height: 0;
+    width: min(1100px, calc(100% - 1.25rem));
+    margin: 0 auto 0.8rem;
+    display: grid;
+    gap: 0.45rem;
+    border: 1px solid var(--color-glass-border);
+    border-radius: 1rem;
+    padding: 0.65rem;
+    background: var(--color-glass-surface);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
+
+  .mobile-link {
+    text-align: left;
+    border-radius: 0.6rem;
+    padding: 0.55rem 0.75rem;
+  }
+}

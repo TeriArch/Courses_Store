@@ -16,12 +16,14 @@ export default function RegistrationForm() {
         return requirements;
     }
     const [showPassword, setShowPassword] = useState(false);
+    const hidePassword = useCallback(() => setShowPassword(false), []);
+
     useEffect(() => {
         if (!showPassword) return;
         let timer;
         const resetTimer = () => {
             if (timer) clearTimeout(timer);
-            timer = setTimeout(() => setShowPassword(false), 20000);
+            timer = setTimeout(() => hidePassword(), 20000);
         }
         resetTimer();
         const events = ["mousedown", "mousemove", "keypress", "scroll", "touchstart"];
@@ -34,10 +36,10 @@ export default function RegistrationForm() {
             if (timer) clearTimeout(timer);
             events.forEach(event => window.removeEventListener(event, resetTimer));
             document.removeEventListener("visibilitychange", () => {
-                if (document.hidden) setShowPassword(false);
+                if (document.hidden) hidePassword();
             });
         }
-    }, [showPassword]);
+    }, [showPassword, hidePassword]);
 
     return (
         <section id="regMain">

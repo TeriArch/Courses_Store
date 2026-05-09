@@ -1,9 +1,134 @@
-:root{
+:root {
+  color-scheme: light;
 
+  --white: #ffffff;
+  --black: #07060a;
+  --purple-100: #f1e9ff;
+  --purple-300: #c4a5ff;
+  --purple-500: #8e4dff;
+  --purple-700: #6224d3;
+
+  --light-bg: #f6f3ff;
+  --light-bg-secondary: #ede5ff;
+  --light-text-strong: #171320;
+  --light-text-muted: #4c4463;
+  --light-text-soft: #7d6ea3;
+  --light-glass-surface: rgba(255, 255, 255, 0.56);
+  --light-glass-surface-strong: rgba(255, 255, 255, 0.7);
+  --light-glass-border: rgba(255, 255, 255, 0.74);
+  --light-glass-border-strong: rgba(196, 165, 255, 0.95);
+  --light-input-bg: rgba(255, 255, 255, 0.82);
+  --light-input-border: rgba(196, 165, 255, 0.6);
+  --light-blob-first: rgba(142, 77, 255, 0.3);
+  --light-blob-second: rgba(98, 36, 211, 0.22);
+  --light-blob-third: rgba(196, 165, 255, 0.25);
+
+  --dark-bg: #0d0a14;
+  --dark-bg-secondary: #1a1230;
+  --dark-text-strong: #f3ecff;
+  --dark-text-muted: #c4b6e8;
+  --dark-text-soft: #a490d1;
+  --dark-glass-surface: rgba(30, 21, 54, 0.52);
+  --dark-glass-surface-strong: rgba(30, 21, 54, 0.74);
+  --dark-glass-border: rgba(196, 165, 255, 0.24);
+  --dark-glass-border-strong: rgba(196, 165, 255, 0.45);
+  --dark-input-bg: rgba(13, 10, 20, 0.5);
+  --dark-input-border: rgba(196, 165, 255, 0.34);
+  --dark-blob-first: rgba(142, 77, 255, 0.3);
+  --dark-blob-second: rgba(98, 36, 211, 0.26);
+  --dark-blob-third: rgba(196, 165, 255, 0.2);
+
+  --color-bg: var(--light-bg);
+  --color-bg-secondary: var(--light-bg-secondary);
+  --color-text-strong: var(--light-text-strong);
+  --color-text-muted: var(--light-text-muted);
+  --color-text-soft: var(--light-text-soft);
+  --color-glass-surface: var(--light-glass-surface);
+  --color-glass-surface-strong: var(--light-glass-surface-strong);
+  --color-glass-border: var(--light-glass-border);
+  --color-glass-border-strong: var(--light-glass-border-strong);
+  --color-input-bg: var(--light-input-bg);
+  --color-input-border: var(--light-input-border);
+  --color-accent: var(--purple-700);
+  --color-button-text: var(--white);
+  --color-blob-first: var(--light-blob-first);
+  --color-blob-second: var(--light-blob-second);
+  --color-blob-third: var(--light-blob-third);
+
+  --glass-blur: 18px;
+  --blob-blur: 80px;
+  --duration-fast: 180ms ease;
+  --duration-medium: 260ms ease;
+  --button-brightness: 1.08;
 }
 
-*{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: var(--dark-bg);
+  --color-bg-secondary: var(--dark-bg-secondary);
+  --color-text-strong: var(--dark-text-strong);
+  --color-text-muted: var(--dark-text-muted);
+  --color-text-soft: var(--dark-text-soft);
+  --color-glass-surface: var(--dark-glass-surface);
+  --color-glass-surface-strong: var(--dark-glass-surface-strong);
+  --color-glass-border: var(--dark-glass-border);
+  --color-glass-border-strong: var(--dark-glass-border-strong);
+  --color-input-bg: var(--dark-input-bg);
+  --color-input-border: var(--dark-input-border);
+  --color-accent: var(--purple-500);
+  --color-button-text: var(--white);
+  --color-blob-first: var(--dark-blob-first);
+  --color-blob-second: var(--dark-blob-second);
+  --color-blob-third: var(--dark-blob-third);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 15%, var(--color-bg-secondary), var(--color-bg));
+  color: var(--color-text-strong);
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(var(--blob-blur));
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::before {
+  width: 28rem;
+  height: 28rem;
+  left: -6rem;
+  top: -5rem;
+  background: var(--color-blob-first);
+}
+
+body::after {
+  width: 22rem;
+  height: 22rem;
+  right: -4rem;
+  bottom: 2rem;
+  background: var(--color-blob-second);
+}
+
+button,
+input,
+select {
+  font: inherit;
 }
