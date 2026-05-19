@@ -45,11 +45,14 @@
   padding: 0.68rem;
   font-weight: 600;
   cursor: pointer;
+  transition: -webkit-filter var(--duration-fast);
   transition: filter var(--duration-fast);
+  transition: filter var(--duration-fast), -webkit-filter var(--duration-fast);
 }
 
 .auth-form button[type="submit"]:hover {
-  filter: brightness(var(--button-brightness));
+  -webkit-filter: brightness(var(--button-brightness));
+          filter: brightness(var(--button-brightness));
 }
 
 .auth-switch {
@@ -64,4 +67,13 @@
   color: var(--color-accent);
   font-weight: 600;
   cursor: pointer;
+}
+
+.tooManyAttemptsText {
+  font-size: 0.8rem;
+  min-height: 1.2rem;
+  margin-top: -0.2rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  color: #ff4d4d;
 }

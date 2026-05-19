@@ -93,7 +93,7 @@
   outline: none;
 }
 #passToggle {
-	position: absolute;
+  position: absolute;
   right: 12px;
   background: none;
   border: none;
@@ -101,4 +101,25 @@
   display: flex;
   padding: 0;
   color: var(--color-text-muted);
+}
+
+.password-hint {
+    font-size: 0.8rem;	
+    min-height: 1.2rem;
+    margin-top: -0.2rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+.complexity-wrapper {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.complexity-bar {
+    height: 100%;
+    transition: width 0.3s ease, background-color 0.3s ease;
 }
