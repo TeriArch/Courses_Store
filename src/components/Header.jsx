@@ -1,4 +1,4 @@
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, Moon, Sun, X, ShoppingCart } from "lucide-react";
 import "./Header.css";
 
 const navItems = [
@@ -40,6 +40,14 @@ export default function Header({
 				</nav>
 
 				<div className="header-actions">
+					<button
+						className="icon-btn"
+						type="button"
+						onClick={() => onNavigate("busket")}
+						aria-label="Открыть корзину"
+					>
+						{<ShoppingCart size={18} />}
+					</button>
 					<button
 						className="icon-btn"
 						type="button"

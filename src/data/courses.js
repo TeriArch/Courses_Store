@@ -8,7 +8,7 @@ export const courses = [
 		format: "Видео + практика",
 		level: "beginner",
 		levelLabel: "Beginner",
-		price: "4 900 RUB",
+		price: "4 900 BYN",
 		tags: ["html", "css", "javascript"],
 	},
 	{
@@ -20,7 +20,7 @@ export const courses = [
 		format: "Проектный воркшоп",
 		level: "intermediate",
 		levelLabel: "Intermediate",
-		price: "7 500 RUB",
+		price: "7 500 BYN",
 		tags: ["ui", "ux", "figma"],
 	},
 	{
@@ -32,7 +32,7 @@ export const courses = [
 		format: "Видео + задания",
 		level: "beginner",
 		levelLabel: "Beginner",
-		price: "8 200 RUB",
+		price: "8 200 BYN",
 		tags: ["analytics", "sql", "dashboard"],
 	},
 	{
@@ -44,7 +44,7 @@ export const courses = [
 		format: "Интенсив",
 		level: "advanced",
 		levelLabel: "Advanced",
-		price: "9 900 RUB",
+		price: "9 900 BYN",
 		tags: ["marketing", "growth", "strategy"],
 	},
 	{
@@ -56,7 +56,7 @@ export const courses = [
 		format: "Лайв + Q&A",
 		level: "intermediate",
 		levelLabel: "Intermediate",
-		price: "6 400 RUB",
+		price: "6 400 BYN",
 		tags: ["automation", "nocode", "business"],
 	},
 	{
@@ -68,7 +68,7 @@ export const courses = [
 		format: "Практикум",
 		level: "advanced",
 		levelLabel: "Advanced",
-		price: "5 700 RUB",
+		price: "5 700 BYN",
 		tags: ["ai", "content", "productivity"],
 	},
 ];
