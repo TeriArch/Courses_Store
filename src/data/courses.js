@@ -49,6 +49,18 @@ export const courses = [
 	},
 	{
 		id: "course-5",
+		title: "DevSecOps Assembler+Pascal+Html(not css)-JS-Kotlin*Kumir 2028 preview",
+		author: "Teri Arch",
+		duration: "Till the rest of your life",
+		lessons: 28000,
+		format: "Forever",
+		level: "advanced++",
+		levelLabel: "Advanced++",
+		price: "199 521 BYN",
+		tags: ["marketing", "growth", "strategy"],
+	},
+	{
+		id: "course-6",
 		title: "No-Code Automation",
 		author: "Ирина Климова",
 		duration: "4 недели",
@@ -60,7 +72,7 @@ export const courses = [
 		tags: ["automation", "nocode", "business"],
 	},
 	{
-		id: "course-6",
+		id: "course-7",
 		title: "AI Tools for Creators",
 		author: "Никита Орлов",
 		duration: "3 недели",

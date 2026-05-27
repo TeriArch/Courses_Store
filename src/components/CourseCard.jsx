@@ -33,9 +33,9 @@ function CourseCard({ course }) {
 				type="button"
 				className="course-btn basket-btn"
 				onClick={() => {
-          busket[busket.length] = course.id
-          console.log(busket)
-        }}
+					busket.push(course.id);
+					console.log(busket);
+				}}
 			>
 				В корзину
 			</button>

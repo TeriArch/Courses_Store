@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import Busket from "./pages/BusketPage";
 import { courses } from "./data/courses";
 import "./App.css";
 
@@ -43,18 +44,19 @@ export default function App() {
   };
 
   const pageContent = {
-    home: (
-      <HomePage
-        courses={filteredCourses}
-        searchQuery={searchQuery}
-        selectedLevel={selectedLevel}
-        onSearchQueryChange={setSearchQuery}
-        onLevelChange={setSelectedLevel}
-      />
-    ),
-    login: <LoginPage onNavigate={handleNavigate} />,
-    register: <RegisterPage onNavigate={handleNavigate} />,
-  };
+		home: (
+			<HomePage
+				courses={filteredCourses}
+				searchQuery={searchQuery}
+				selectedLevel={selectedLevel}
+				onSearchQueryChange={setSearchQuery}
+				onLevelChange={setSelectedLevel}
+			/>
+		),
+		login: <LoginPage onNavigate={handleNavigate} />,
+		register: <RegisterPage onNavigate={handleNavigate} />,
+		Busket: <Busket />,
+	};
 
   return (
     <div className="app-shell">

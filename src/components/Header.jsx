@@ -1,5 +1,6 @@
 import { Menu, Moon, Sun, X, ShoppingCart } from "lucide-react";
 import "./Header.css";
+import Busket from "../pages/BusketPage";
 
 const navItems = [
   // { key: "home", label: "Главная" },
@@ -43,7 +44,7 @@ export default function Header({
 					<button
 						className="icon-btn"
 						type="button"
-						onClick={() => onNavigate("busket")}
+						onClick={() => onNavigate("Busket")}
 						aria-label="Открыть корзину"
 					>
 						{<ShoppingCart size={18} />}
